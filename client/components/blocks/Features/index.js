@@ -4,7 +4,10 @@ import FeatureCards from './feature-cards';
 const Features = ({ header, cards }) => {
   return (
     <div className="bg-gray-50 pb-24">
-      <Header {...header} />
+      <Header
+        // {...header}
+        title={'Property cards to be shown here'}
+      />
       <FeatureCards cards={cards} />
     </div>
   );
