@@ -21,6 +21,18 @@ const FeaturesWithImages = dynamic(
     ssr: true,
   }
 );
+const Collections = dynamic(() => import('../../blocks/Collections'), {
+  ssr: true,
+});
+const MasterPlan = dynamic(() => import('../../blocks/MasterPlan'), {
+  ssr: true,
+});
+const NewsEvents = dynamic(() => import('../../blocks/NewsEvents'), {
+  ssr: true,
+});
+const OtherProperties = dynamic(() => import('../../blocks/OtherProperties'), {
+  ssr: true,
+});
 const Hero = dynamic(() => import('../../blocks/Hero'), {
   ssr: true,
 });
@@ -61,7 +73,6 @@ const BlockManager = ({ blocks, contentType, pageData, type }) => {
           case 'blocks.faq':
             Block = Faq;
             break;
-
           case 'blocks.hero':
             Block = Hero;
             break;
@@ -76,6 +87,18 @@ const BlockManager = ({ blocks, contentType, pageData, type }) => {
             break;
           case 'blocks.features':
             Block = Features;
+            break;
+          case 'blocks.collections':
+            Block = Collections;
+            break;
+          case 'blocks.master-plan':
+            Block = MasterPlan;
+            break;
+          case 'blocks.news-events':
+            Block = NewsEvents;
+            break;
+          case 'blocks.other-properties':
+            Block = OtherProperties;
             break;
           case 'blocks.testimonial':
             Block = Testimonial;

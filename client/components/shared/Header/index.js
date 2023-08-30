@@ -1,6 +1,6 @@
-const Header = ({ theme, label, title }) => {
+const Header = ({ theme, label, title, description }) => {
   return (
-    <div className="text-center pt-24">
+    <div className="text-left">
       {label && (
         <h2 className={`text-${theme} font-extrabold tracking-wide uppercase`}>
           {label}
@@ -8,10 +8,12 @@ const Header = ({ theme, label, title }) => {
       )}
 
       {title && (
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        <p className="text-3xl text-sp pb-8 leading-8 font-extrabold sm:text-4xl">
           {title}
         </p>
       )}
+
+      <p className="mb-8 text-black leading-relaxed">{description}</p>
     </div>
   );
 };

@@ -28,6 +28,7 @@ module.exports = {
           darker: '#D1D5DB',
           text: '#555b66',
         },
+        sp: '#BF9251',
       },
     },
   },
@@ -40,8 +41,7 @@ module.exports = {
   plugins: [],
   safelist: [
     {
-      pattern:
-        /(bg|text)-(primary|secondary|muted)/,
+      pattern: /(bg|text)-(primary|secondary|muted)/,
     },
   ],
 };

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blocks_other_properties",
+  "info": {
+    "displayName": "Other Properties"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    }
+  }
+}

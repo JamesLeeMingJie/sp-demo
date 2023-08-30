@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blocks_master_plans",
+  "info": {
+    "displayName": "MasterPlan"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    }
+  }
+}

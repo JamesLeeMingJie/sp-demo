@@ -48,7 +48,11 @@
         "blocks.related-articles",
         "blocks.related-restaurants",
         "blocks.team",
-        "blocks.testimonial"
+        "blocks.testimonial",
+        "blocks.collections",
+        "blocks.master-plan",
+        "blocks.news-events",
+        "blocks.other-properties"
       ],
       "pluginOptions": {
         "i18n": {

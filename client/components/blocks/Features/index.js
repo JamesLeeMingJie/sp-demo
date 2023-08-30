@@ -3,12 +3,12 @@ import FeatureCards from './feature-cards';
 
 const Features = ({ header, cards }) => {
   return (
-    <div className="bg-gray-50 pb-24">
+    <div className="h-screen mx-auto w-10/12 py-24">
       <Header
-        // {...header}
-        title={'Property cards to be shown here'}
+        {...header}
+        // title={'Key Features'}
       />
-      <FeatureCards cards={cards} />
+      {/* <FeatureCards cards={cards} /> */}
     </div>
   );
 };
