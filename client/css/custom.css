@@ -3,3 +3,9 @@
 .filledImage>span {
   width: 100% !important;
 }
+
+/* Collections */
+
+.unitIcons>svg {
+  margin-left: auto !important;
+}

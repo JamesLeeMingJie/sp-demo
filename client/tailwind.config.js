@@ -32,7 +32,15 @@ module.exports = {
         spRed: '#F01A2A',
         spGreen: '#2AA040',
         spGreyText: '#D9D9D9',
-        spGreyBg: '#F6F6F6'
+        spGreyBg: '#F6F6F6',
+      },
+      screens: {
+        sm: '320px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+        '3xl': '1636px',
       },
     },
   },
