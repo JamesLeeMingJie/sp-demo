@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_collections",
   "info": {
-    "displayName": "Collections"
+    "displayName": "Collections",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.header"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.card"
     }
   }
 }

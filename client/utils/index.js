@@ -83,6 +83,17 @@ export function getData(slug, locale, apiID, kind, preview) {
   }
 }
 
+export async function getProducts() {
+  let baseUrl = getStrapiURL(`/products?populate=*`);
+
+  const res = await fetch(baseUrl);
+  const products = await res.json();
+
+  return {
+    products: products.data,
+  };
+}
+
 export async function getRestaurants(key) {
   const categoryName = key.queryKey[1].category;
   const placeName = key.queryKey[2].place;

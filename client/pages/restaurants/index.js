@@ -29,20 +29,7 @@ const Restaurants = ({
   const placeText = delve(pageData, 'attributes.placeText');
   const categoryText = delve(pageData, 'attributes.categoryText');
 
-  const { data, status } = useQuery(
-    [
-      'restaurants',
-      { category: categoryId },
-      { place: placeId },
-      { locale: locale },
-      { page: pageNumber },
-      { perPage },
-    ],
-    getRestaurants,
-    {
-      initialData,
-    }
-  );
+  const { data, status } = useQuery(['restaurants',{ category: categoryId },{ place: placeId },{ locale: locale },{ page: pageNumber },{ perPage },],getRestaurants,{initialData,});
 
   const lastPage = Math.ceil(data.count / perPage) || 1;
 
