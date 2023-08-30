@@ -3,7 +3,7 @@
 
 const Nav = ({ links, locale }) => {
   return (
-    <nav className="text-xl flex flex-wrap p-5 flex-col md:flex-row items-center gap-x-8">
+    <nav className="text-xl flex flex-wrap text-white p-5 flex-col md:flex-row items-center gap-x-8">
       {/* {links.map((link, index) => (
         <Link
           href={`${delve(link, 'href')}?lang=${locale || 'en'}`}
@@ -14,8 +14,14 @@ const Nav = ({ links, locale }) => {
           </a>
         </Link>
       ))} */}
-      <div>Properties</div>
-      <div>Placeholder</div>
+
+      <div>Key Features</div>
+      <div>Collections</div>
+      <div>Community</div>
+      <div>Resources</div>
+      <div>Calculator</div>
+      <div>Registration</div>
+      <div>Contact Us</div>
     </nav>
   );
 };

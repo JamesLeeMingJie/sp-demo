@@ -6,7 +6,7 @@ import placeholderImage from '../../../public/assets/img/news-image.png'
 
 const NewsEvents = ({ header }) => {
   return (
-    <div className="h-screen py-24">
+    <div className="h-fit pt-24">
       <div className='mx-auto w-10/12 flex items-center justify-between'>
         <Header
           {...header}

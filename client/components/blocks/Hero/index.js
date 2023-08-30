@@ -3,13 +3,16 @@ import CustomLink from '../../shared/CustomLink';
 import ImageCards from './image-cards';
 
 import Image from 'next/image';
+import styles from '../../../css/Background.module.css';
 import placeholderImage from '../../../public/assets/img/sp-placeholder.jpg';
 
 const Hero = ({ images, header, text, buttons }) => {
   const title = delve(header, 'title');
 
   return (
-    <section className="text-gray-600 body-font h-screen bg-black flex justify-center items-center">
+    <section
+      className={`text-gray-600 body-font h-screen ${styles.homeBackground} flex justify-center items-center`}
+    >
       <div className="container flex md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 my-12 lg:pl-24 md:pl-16 md:mx-auto flex flex-col md:items-start md:text-left items-center text-center">
           {title && (
@@ -27,7 +30,9 @@ const Hero = ({ images, header, text, buttons }) => {
             </p>
           )}
 
-          <button className="bg-sp text-white p-4">Register &rarr;</button>
+          <button className="bg-white text-spRed font-extrabold tracking-wider text-[18px] rounded-[30px] px-4 py-2">
+            Register &rarr;
+          </button>
 
           {/* <div className="block space-y-3 md:flex md:space-y-0 space-x-2">
             {buttons &&
@@ -51,10 +56,10 @@ const Hero = ({ images, header, text, buttons }) => {
           </div> */}
         </div>
         <div className="mt-4 relative relative-20 lg:mt-0 lg:col-start-1">
-          <Image
+          {/* <Image
             // images={images}
             src={placeholderImage}
-          />
+          /> */}
         </div>
       </div>
     </section>

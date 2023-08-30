@@ -1,0 +1,5 @@
+.homeBackground {
+  background: url('../public//assets/img/home-bg.png');
+  background-position: center;
+  background-size: cover;
+}

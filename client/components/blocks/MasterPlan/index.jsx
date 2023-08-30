@@ -5,7 +5,7 @@ import placeholderImage from '../../../public/assets/img/master-plan.jpg';
 
 export default function MasterPlan({ header }) {
   return (
-    <div className="h-screen py-24">
+    <div className="h-fit pt-24">
       <div className='mx-auto w-10/12 flex gap-x-40'>
         <div className='w-5/12'>
           <Header

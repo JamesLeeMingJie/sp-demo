@@ -13,8 +13,10 @@ const Footer = ({ footer, pageData }) => {
       <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
         <Columns
           columns={delve(footer, 'footerColumns')}
-          locale={delve(pageData, 'attributes.locale')}
+          // locale={delve(pageData, 'attributes.locale')}
         />
+        <div className="text-[16px]">{console.log(footer)}</div>
+
         <div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-between">
           {socialNetworks &&
             socialNetworks.map((network, index) => (
@@ -32,11 +34,13 @@ const Footer = ({ footer, pageData }) => {
             </button>
           )}
         </div>
+
         {label && (
           <div className="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
             {label}
           </div>
         )}
+        
       </div>
     </footer>
   );

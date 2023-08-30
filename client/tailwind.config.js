@@ -29,6 +29,10 @@ module.exports = {
           text: '#555b66',
         },
         sp: '#BF9251',
+        spRed: '#F01A2A',
+        spGreen: '#2AA040',
+        spGreyText: '#D9D9D9',
+        spGreyBg: '#F6F6F6'
       },
     },
   },
