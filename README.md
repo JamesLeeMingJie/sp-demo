@@ -37,7 +37,7 @@ Navigate to your `./my-projects/sp-demo/api` folder by running `cd api` from you
 - Run the following command in your `./sp-demo/api` folder:
 
 ```
-yarn && yarn seed && yarn develop
+npm install && npm run seed && npm run develop
 ```
 
 This will install the dependencies, fill your application with data and run your server. You can run these commands separately.
@@ -63,7 +63,7 @@ Navigate to your `./my-projects/sp-demo/client` folder by running `cd client` fr
 - Run the following command in your `./sp-demo/client` folder
 
 ```
-yarn && yarn dev
+npm install && npm run dev
 ```
 
 This will install the dependencies, and run your server. You can run these commands separately.
