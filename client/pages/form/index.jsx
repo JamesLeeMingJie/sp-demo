@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Layout from "../../components/layout";
 import { useQuery } from 'react-query';
 import { getForms } from '../../utils';
@@ -30,34 +30,75 @@ export default function Form({ global, pageData, preview, initialData }) {
     collections: collections
   }
 
-  const [input1, setinput1] = useState(false);
+  const [input1, setinput1] = useState("");
   const toggleInput1 = () => {
     setinput1(!input1)
   };
 
-  const [input2, setinput2] = useState(false);
+  const [input2, setinput2] = useState("");
   const toggleInput2 = () => {
     setinput2(!input2)
   };
 
-  const [input3, setinput3] = useState(false);
+  const [input3, setinput3] = useState("");
   const toggleInput3 = () => {
     setinput3(!input3)
   };
 
-  const [input4, setinput4] = useState(false);
+  const [input4, setinput4] = useState("");
   const toggleInput4 = () => {
     setinput4(!input4)
   };
 
-  const [input5, setinput5] = useState(false);
+  const [input5, setinput5] = useState("");
   const toggleInput5 = () => {
     setinput5(!input5)
   };
 
-  const [input6, setinput6] = useState(false);
+  const [input6, setinput6] = useState("");
   const toggleInput6 = () => {
     setinput6(!input6)
+  };
+
+  const [submit, setSubmit] = useState(false);
+  const toggleSubmit = () => {
+    setSubmit(!submit)
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    toggleSubmit()
+
+    const formData = {
+      data: {
+        name: name,
+        phone: phone,
+        email: email,
+        country: country,
+        township: township,
+        collections: collections
+      }
+    }
+
+    const response = await fetch('http://localhost:1337/api/submissions', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const content = await response.json();
+    console.log(content);
+
+    // setName('');
+    // setPhone('');
+    // setEmail('');
+    // setCountry('');
+    // setTownship('');
+    // setCollections('');
   };
 
   const checkSetter = (item) => {
@@ -76,7 +117,14 @@ export default function Form({ global, pageData, preview, initialData }) {
     }
   }
 
-  function InputTag({ input }) {
+  const InputTag = ({ input }) => {
+    const selectedSetter = checkSetter(input);
+
+    const handleInputChange = (e) => {
+      const newValue = e.target.value;
+      selectedSetter(newValue);
+    }
+
     return (
       <div className={`border-b-[2px] ${input.attributes.inputNumber ? "border-sp" : "border-spGreyText"} `}>
         <p className='text-black font-bold'>
@@ -85,10 +133,10 @@ export default function Form({ global, pageData, preview, initialData }) {
         <div className='flex'>
           <input
             value={inputNames[input.attributes.title.toLowerCase()]}
-            onChange={(e) => (checkSetter(input))(e.target.value)}
-            onFocus={window[input.attributes.inputMethod]}
-            onBlur={window[input.attributes.inputNumber]}
-            class={`appearance-none bg-transparent border-none w-full ${input.attributes.inputNumber ? "text-sp placeholder-sp" : "text-spGreyText"} mr-3 py-2 leading-tight focus:outline-none`}
+            onChange={handleInputChange}
+            // onFocus={window[input.attributes.inputMethod]}
+            // onBlur={window[input.attributes.inputNumber]}
+            className={`appearance-none bg-transparent border-none w-full ${input.attributes.inputNumber ? "text-sp placeholder-sp" : "text-spGreyText"} mr-3 py-2 leading-tight focus:outline-none`}
             type="text"
             placeholder={input.attributes.placeholder} />
         </div>
@@ -96,7 +144,14 @@ export default function Form({ global, pageData, preview, initialData }) {
     )
   }
 
-  function SelectTag({ input }) {
+  const SelectTag = ({ input }) => {
+    const selectedSetter = checkSetter(input);
+
+    const handleInputChange = (e) => {
+      const newValue = e.target.value;
+      selectedSetter(newValue);
+    }
+
     return (
       <div className={`border-b-[2px] ${input.attributes.inputNumber ? "border-sp" : "border-spGreyText"} `}>
         <p className='text-black font-bold'>
@@ -105,11 +160,12 @@ export default function Form({ global, pageData, preview, initialData }) {
         <div className='flex'>
           <select
             value={inputNames[input.attributes.title.toLowerCase()]}
-            onChange={(e) => setCountry(e.target.value)}
-            onFocus={window[input.attributes.inputMethod]}
-            onBlur={window[input.attributes.inputMethod]}
-            class={`appearance-none bg-transparent border-none w-full ${input.attributes.inputNumber ? "text-sp placeholder-sp" : "text-spGreyText"} mr-3 py-2 leading-tight focus:outline-none`}
+            onChange={handleInputChange}
+            // onFocus={window[input.attributes.inputMethod]}
+            // onBlur={window[input.attributes.inputMethod]}
+            className={`appearance-none bg-transparent border-none w-full ${input.attributes.inputNumber ? "text-sp placeholder-sp" : "text-spGreyText"} mr-3 py-2 leading-tight focus:outline-none`}
             type="text">
+            <option value="">[ PLEASE SELECT ]</option>
             <option value={`${input.attributes.placeholder}`}>{input.attributes.placeholder}</option>
           </select>
         </div>
@@ -135,17 +191,17 @@ export default function Form({ global, pageData, preview, initialData }) {
         <p className="w-10/12 mx-auto text-black text-center pb-12 text-xl leading-relaxed">Get in touch to learn more about our latest developments.</p>
 
         <div className='sm:w-10/12 md:w-8/12 mx-auto'>
-          <form action="" method="post">
+          <form onSubmit={handleSubmit}>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 pb-8'>
 
               {data?.forms.map(function (input) {
                 if (input.attributes.isInput === true) {
                   return (
-                    <InputTag input={input} />
+                    <InputTag key={input.id} input={input} />
                   )
                 } else {
                   return (
-                    <SelectTag input={input} />
+                    <SelectTag key={input.id} input={input} />
                   )
                 }
               })}
@@ -197,7 +253,7 @@ export default function Form({ global, pageData, preview, initialData }) {
 
             </div>
             <button className='shadow-lg w-fit spButton-red'>
-              Submit
+              {submit ? "Submitted" : "Submit"}
               <span className="text-[28px]">
                 <LiaChevronCircleRightSolid />
               </span>

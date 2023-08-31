@@ -17,12 +17,12 @@ const Hero = ({ images, header, text, buttons }) => {
     >
       <div className="container grid md:grid-cols-2 items-center w-10/12 mx-auto">
         <div className="lg:flex-grow my-12 md:mx-auto flex flex-col md:items-start md:text-left items-center text-center">
-          {title && (
+          {/* {title && ( */}
             <h1 className="title-font lg:text-6xl text-5xl mb-4 font-black text-white">
               {/* {title} */}
               Welcome to Setia Alam Impian
             </h1>
-          )}
+          {/* )} */}
 
           {text && (
             <p className="mb-8 px-2 text-white leading-relaxed">

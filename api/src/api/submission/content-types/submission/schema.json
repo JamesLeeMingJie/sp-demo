@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "forms",
+  "collectionName": "submissions",
   "info": {
-    "singularName": "form",
-    "pluralName": "forms",
-    "displayName": "Form",
-    "description": ""
+    "singularName": "submission",
+    "pluralName": "submissions",
+    "displayName": "Submission"
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +15,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "name": {
       "pluginOptions": {
         "versions": {
           "versioned": true
@@ -24,7 +23,7 @@
       },
       "type": "string"
     },
-    "placeholder": {
+    "phone": {
       "pluginOptions": {
         "versions": {
           "versioned": true
@@ -32,7 +31,7 @@
       },
       "type": "string"
     },
-    "inputNumber": {
+    "email": {
       "pluginOptions": {
         "versions": {
           "versioned": true
@@ -40,7 +39,7 @@
       },
       "type": "string"
     },
-    "inputMethod": {
+    "nationality": {
       "pluginOptions": {
         "versions": {
           "versioned": true
@@ -48,14 +47,21 @@
       },
       "type": "string"
     },
-    "isInput": {
+    "township": {
       "pluginOptions": {
         "versions": {
           "versioned": true
         }
       },
-      "type": "boolean",
-      "required": true
+      "type": "string"
+    },
+    "collections": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "string"
     }
   }
 }

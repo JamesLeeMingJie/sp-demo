@@ -15,7 +15,7 @@ const Footer = ({ footer, pageData }) => {
           columns={delve(footer, 'footerColumns')}
           // locale={delve(pageData, 'attributes.locale')}
         />
-        <div className="text-[16px]">{console.log(footer)}</div>
+        {/* <div className="text-[16px]">{console.log(footer)}</div> */}
 
         <div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-between">
           {socialNetworks &&
