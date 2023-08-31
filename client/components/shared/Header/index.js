@@ -8,12 +8,12 @@ const Header = ({ theme, label, title, description }) => {
       )}
 
       {title && (
-        <p className="text-3xl text-sp pb-8 leading-8 font-extrabold sm:text-4xl">
+        <p className="text-3xl text-sp pb-8 leading-8 font-extrabold sm:text-4xl ">
           {title}
         </p>
       )}
 
-      <p className="mb-8 text-black leading-relaxed">{description}</p>
+      <p className="mb-8 text-black leading-relaxed md:w-7/12 mr-auto">{description}</p>
     </div>
   );
 };

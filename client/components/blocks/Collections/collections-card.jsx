@@ -12,8 +12,8 @@ export default function CollectionsCard({ cards, initialData }) {
     <div className='mx-auto w-10/12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8'>
       {data?.products.map(function (product) {
         return (
-          <a href={`/collections/${product.id}`}>
-            <div key={product.id} className='p-4 shadow-xl h-full rounded-[5px]'>
+          <a key={product.id} href={`/collections/${product.id}`}>
+            <div className='p-4 shadow-xl h-full rounded-[5px]'>
               <div className='relative pb-4'>
                 <div className='filledImage'>
                   <Image src={placeholderImage} />

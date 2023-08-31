@@ -7,7 +7,7 @@ import placeholderImage from '../../../public/assets/img/news-image.png'
 const NewsEvents = ({ header }) => {
   return (
     <div className="h-fit pt-24">
-      <div className='mx-auto w-10/12 flex items-center justify-between'>
+      <div className='mx-auto w-10/12 flex sm:flex-col md:flex-row sm:items-start md:items-center justify-between sm:pb-12 md:pb-0'>
         <Header
           {...header}
         />
@@ -17,7 +17,7 @@ const NewsEvents = ({ header }) => {
       </div>
 
       {/* NewsEvents Card component - to be built later */}
-      <div className='mx-auto w-10/12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8'>
+      <div className='mx-auto w-10/12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         <div className='p-4 shadow-xl rounded-[5px]'>
           <div className='relative pb-4'>
             <div className='filledImage'>

@@ -37,7 +37,7 @@ const Features = ({ header, cards }) => {
       {/* <FeatureCards cards={cards} /> */}
 
       <section>
-        <div>
+        <div className='mx-auto md:w-11/12'>
           <div className="shadow-xl rounded-[5px] grid sm:grid-cols-1 lg:grid-cols-2 gap-x-12 p-8">
             <div className="sm:pb-8 lg:pb-0">
               <div

@@ -25,7 +25,7 @@ const Nav = ({ links, locale }) => {
         <div>Registration</div>
         <div>Contact Us</div>
       </nav>
-      <nav className='sm:block lg:hidden'>
+      <nav className="sm:block lg:hidden">
         <GiHamburgerMenu />
       </nav>
     </>

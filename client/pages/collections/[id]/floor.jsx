@@ -5,7 +5,7 @@ import floorPlaceholderImage from '../../../public/assets/img/floor-placeholder-
 export default function Floor() {
   return (
     <section className='py-24'>
-      <div className='mx-auto w-10/12 flex'>
+      <div className='mx-auto w-10/12 flex sm:flex-col md:flex-row gap-20'>
         <div className='flex-1'>
           <p className="text-3xl text-sp pb-8 leading-8 font-extrabold sm:text-5xl">
             Floor Plan

@@ -105,6 +105,17 @@ export async function getForms() {
   };
 }
 
+export async function getButtons() {
+  let baseUrl = getStrapiURL(`/pages?populate=*`);
+
+  const res = await fetch(baseUrl);
+  const forms = await res.json();
+
+  return {
+    forms: forms.data,
+  };
+}
+
 export async function getRestaurants(key) {
   const categoryName = key.queryKey[1].category;
   const placeName = key.queryKey[2].place;

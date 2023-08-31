@@ -49,12 +49,12 @@ export default function CollectionsPage({
       >
         <div className="container flex md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 my-12 lg:pl-24 md:pl-16 md:mx-auto flex flex-col md:items-start md:text-left items-center text-center">
-            {title && (
-              <h1 className="title-font lg:text-6xl text-5xl mb-4 font-black text-white">
-                {/* {title} */}
-                Welcome to Setia Alam Impian
-              </h1>
-            )}
+            {/* {title && ( */}
+            <h1 className="title-font lg:text-6xl text-5xl mb-4 font-black text-white">
+              {/* {title} */}
+              Casablanca 1
+            </h1>
+            {/* )} */}
 
             {/* {text && ( */}
             <p className="mb-8 px-2 text-white leading-relaxed">
@@ -98,7 +98,7 @@ export default function CollectionsPage({
         </div>
       </section>
       <section>
-        <div className='grid grid-cols-7'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7'>
           <div className={`${tabs === 'floor' ? "bg-sp text-white" : "bg-spGreyBg text-spGreyText"} py-4 cursor-pointer text-center`} onClick={() => { setTabs('floor') }}>
             <Image src={floorIcon} />
             <p>Floor Plan</p>
