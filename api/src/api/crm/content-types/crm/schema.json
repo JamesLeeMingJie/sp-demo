@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crms",
+  "info": {
+    "singularName": "crm",
+    "pluralName": "crms",
+    "displayName": "CRM"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "createdate": {
+      "type": "datetime"
+    }
+  }
+}

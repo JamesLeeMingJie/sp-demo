@@ -15,8 +15,8 @@ const Hero = ({ images, header, text, buttons }) => {
     <section
       className={`text-gray-600 body-font h-screen ${styles.homeBackground} flex justify-center items-center`}
     >
-      <div className="container flex md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 my-12 lg:pl-24 md:pl-16 md:mx-auto flex flex-col md:items-start md:text-left items-center text-center">
+      <div className="container grid grid-cols-2 items-center w-10/12 mx-auto">
+        <div className="lg:flex-grow my-12 md:mx-auto flex flex-col md:items-start md:text-left items-center text-center">
           {title && (
             <h1 className="title-font lg:text-6xl text-5xl mb-4 font-black text-white">
               {/* {title} */}
