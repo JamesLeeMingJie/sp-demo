@@ -4,9 +4,14 @@
   background-size: cover;
 }
 
-.blurBackground {
-  background: url('../public/assets/img/blur-bg.png');
+.siteBackground {
+  background: url('../public/assets/img/site-bg.png');
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(white, white);
+}
+
+.formBackground {
+  background: url('../public/assets/img/form-bg.png');
+  background-position: center;
+  background-size: cover;
 }

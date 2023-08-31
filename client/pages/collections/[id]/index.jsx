@@ -170,7 +170,7 @@ export default function CollectionsPage({
       )}
 
       {tabs === 'progress' && (
-        <section className={`py-24 h-screen relative ${styles.blurBackground}`}>
+        <section className={`py-24 h-screen relative ${styles.siteBackground}`}>
           <div className='mx-auto w-10/12'>
             <div>
               <p className="text-3xl text-center text-sp pb-4 leading-8 font-extrabold sm:text-5xl">
@@ -179,7 +179,7 @@ export default function CollectionsPage({
               <p className="text-black text-center text-2xl leading-relaxed">Site progress photos are updated every two months</p>
             </div>
 
-            <p className="absolute top-[50%] left-[50%] translate-x-[-50%] text-black text-center font-bold text-2xl leading-relaxed">Due to recently launch progress will be updated soon. Thank you.</p>
+            <p className="absolute top-[50%] left-[50%] translate-x-[-50%] w-10/12 text-black text-center font-bold text-2xl leading-relaxed">Due to recently launch progress will be updated soon. <br /> Thank you.</p>
           </div>
         </section>
       )}

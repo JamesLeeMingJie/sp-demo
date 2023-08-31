@@ -32,12 +32,12 @@ const Hero = ({ images, header, text, buttons }) => {
             </p>
           )}
 
-          <button className='spButton-red'>
+          <div className='spButton-red'>
             Register
             <span className="text-[28px]">
               <LiaChevronCircleRightSolid />
             </span>
-          </button>
+          </div>
 
           {/* <div className="block space-y-3 md:flex md:space-y-0 space-x-2">
             {buttons &&
