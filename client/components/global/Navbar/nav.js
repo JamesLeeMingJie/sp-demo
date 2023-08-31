@@ -1,10 +1,12 @@
 // import delve from 'dlv';
 // import Link from 'next/link';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Nav = ({ links, locale }) => {
   return (
-    <nav className="text-xl flex flex-wrap text-white p-5 flex-col md:flex-row items-center gap-x-8">
-      {/* {links.map((link, index) => (
+    <>
+      <nav className="text-xl sm:hidden lg:grid grid-cols-7 text-white p-5 items-center gap-x-8">
+        {/* {links.map((link, index) => (
         <Link
           href={`${delve(link, 'href')}?lang=${locale || 'en'}`}
           key={`navigationLink-${index}`}
@@ -15,14 +17,18 @@ const Nav = ({ links, locale }) => {
         </Link>
       ))} */}
 
-      <div>Key Features</div>
-      <div>Collections</div>
-      <div>Community</div>
-      <div>Resources</div>
-      <div>Calculator</div>
-      <div>Registration</div>
-      <div>Contact Us</div>
-    </nav>
+        <div>Key Features</div>
+        <div>Collections</div>
+        <div>Community</div>
+        <div>Resources</div>
+        <div>Calculator</div>
+        <div>Registration</div>
+        <div>Contact Us</div>
+      </nav>
+      <nav className='sm:block lg:hidden'>
+        <GiHamburgerMenu />
+      </nav>
+    </>
   );
 };
 

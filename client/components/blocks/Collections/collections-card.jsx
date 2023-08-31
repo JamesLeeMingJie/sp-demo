@@ -13,7 +13,7 @@ export default function CollectionsCard({ cards, initialData }) {
       {data?.products.map(function (product) {
         return (
           <a href={`/collections/${product.id}`}>
-            <div key={product.id} className='p-4 shadow-xl rounded-[5px]'>
+            <div key={product.id} className='p-4 shadow-xl h-full rounded-[5px]'>
               <div className='relative pb-4'>
                 <div className='filledImage'>
                   <Image src={placeholderImage} />

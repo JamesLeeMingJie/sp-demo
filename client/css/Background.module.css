@@ -15,3 +15,9 @@
   background-position: center;
   background-size: cover;
 }
+
+.featureBackground {
+  background: url('../public/assets/img/feature-bg.png');
+  background-position: center;
+  background-size: cover;
+}

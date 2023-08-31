@@ -14,7 +14,7 @@ const OtherProperties = ({ header }) => {
       </div>
 
       {/* OtherProperties Card component - to be built later */}
-      <div className='mx-auto w-10/12 grid grid-cols-3 gap-x-8'>
+      <div className='mx-auto w-10/12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8'>
 
         <div className='rounded-[5px]'>
           <div className='relative'>

@@ -94,6 +94,17 @@ export async function getProducts() {
   };
 }
 
+export async function getForms() {
+  let baseUrl = getStrapiURL(`/forms?populate=*`);
+
+  const res = await fetch(baseUrl);
+  const forms = await res.json();
+
+  return {
+    forms: forms.data,
+  };
+}
+
 export async function getRestaurants(key) {
   const categoryName = key.queryKey[1].category;
   const placeName = key.queryKey[2].place;
