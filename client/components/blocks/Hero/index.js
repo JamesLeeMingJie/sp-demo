@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from '../../../css/Background.module.css';
 import placeholderImage from '../../../public/assets/img/sp-placeholder.jpg';
 
+import { LiaChevronCircleRightSolid } from 'react-icons/lia';
+
 const Hero = ({ images, header, text, buttons }) => {
   const title = delve(header, 'title');
 
@@ -30,8 +32,11 @@ const Hero = ({ images, header, text, buttons }) => {
             </p>
           )}
 
-          <button className="bg-white text-spRed font-extrabold tracking-wider text-[18px] rounded-[30px] px-4 py-2">
-            Register &rarr;
+          <button className='spButton-red'>
+            Register
+            <span className="text-[28px]">
+              <LiaChevronCircleRightSolid />
+            </span>
           </button>
 
           {/* <div className="block space-y-3 md:flex md:space-y-0 space-x-2">

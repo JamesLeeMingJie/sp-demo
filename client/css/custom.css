@@ -1,11 +1,24 @@
 /* Home Page */
-
 .filledImage>span {
   width: 100% !important;
+  height: 100% !important;
 }
 
 /* Collections */
-
 .unitIcons>svg {
   margin-left: auto !important;
+}
+
+/* Utilities */
+.spButton-red {
+  background: white;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  color: #F01A2A;
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: .5rem 1rem;
+  letter-spacing: 0.025em;
 }
